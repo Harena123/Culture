@@ -1,0 +1,331 @@
+#page {
+    display: grid;
+    margin-left: 196px;
+    text-align: center;
+    width: 66%;
+    height: 380px;
+    grid-template:
+      [header-left] "head head" 130px [header-right]
+      [main-left] "nav main" 1fr [main-right]
+      [footer-left] "nav foot" 109px [footer-right]
+      / 143px 1fr;
+  }
+  
+
+  /* "a a a" 40px
+            "b c c" 40px
+            "b c c" 40px / 1fr 1fr 1fr; */
+header {
+    /* background-color: rgb(63 190 131); */
+    /* background-color: rgb(64 190 131 / 63%); */
+    grid-area: head;
+    /* border: 3px solid rgb(27 180 85 / 94);
+    border-radius: 5px;
+    margin-left: 141px;
+    margin-bottom: 40px ;
+    margin-top: 27px; */
+  }
+  
+  nav {
+    /* background-color: #40be83; */
+    grid-area: nav;
+    
+  }
+  
+  main {
+    /* background-color: #d7d9bbdb; */
+    grid-area: main;
+    border-radius: 5px;
+    height: 466px;
+    margin-top: -206px;
+    margin-left: -10px;
+  }
+  
+  footer {
+    /* background-color: #40be83;; */
+    grid-column: foot;
+  }
+  /* typographie */
+h1{
+    grid-column:span 3;
+    margin-top: 37px;
+    /* background:#f60; */
+  }
+  
+  /* arial paragraphe 1 */
+  p:nth-of-type(1){
+    background:rgb(30, 104, 84);
+    grid-row:span 3;
+  }
+  
+  /* helvetica et gotham <p> 2 et 4*/
+  p:nth-of-type(2),
+  p:nth-of-type(4){
+    background:#000;
+    grid-row:span 2;
+  }
+  
+  /* georgia et futura */
+  /*  RIEN  :) */
+  
+  
+  /* le reste pour que ça marche */
+  
+  .grid{
+    display:grid; /* le fameux */
+    grid-template-columns:1fr 1fr 1fr 1fr; /* 4 colonnes de largeur = */
+    grid-template-rows:200px 200px 200px ; /* 3 rangées */
+    grid-row-gap:12px; /* gouttière de rangées */
+    grid-column-gap:12px; /* gouttière de colonnes */
+    padding:0; 
+    margin:12px;
+    max-width:960px;
+    margin-left: 317px;
+  }
+  
+  .grid>*{
+    padding:12px;
+    margin:0;
+    color:#6c0101;
+    background:#222;
+    margin:0;
+    display:block;
+  }
+  
+  
+  
+
+  input[type="submit"] {
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    font-size: 108%;
+    margin-top: 30px;
+    width: 157px;
+    height: 37px;
+  }
+  /* border: 1px solid rgb(27 180 85 / 94);
+  border-radius: 5px;
+  color: #181818;
+  background-color: rgb(71 206 165); */
+
+  input[type="text"],
+  input[type="number"],
+  input[type="password"] {
+    border: 1px solid rgba(191, 216, 227, .8);
+    padding: 3px;
+    border-radius: 5px;
+    font-size: 82%;
+    width: 50%;
+    height: 25px;
+    margin-top: 29px;
+  }
+  .actions{
+    margin-bottom: 22px;
+  }
+  .tete{
+    margin-left: 5px;
+  }
+  .lien{
+    border: 3px solid rgb(27 180 85 / 94);
+    border-radius: 5px;
+    color: #0a0f0bad;
+    background-color: rgb(255, 255, 255);
+    font-size: 89%;
+    margin-top: 24px;
+    width: 122px;
+    margin-left: 301px;
+    margin-top: -11px;
+  }
+  .lien a{
+    text-decoration: none;
+    color: #0a0f0bad;;
+  }
+  #dataTable{
+    border-radius: 1px;
+    width: 100%;
+  }
+  .valide{
+    text-decoration: none;
+  }
+  #bloc
+{
+    width: 550px;
+    height: 400px;
+    margin-left: 118px;
+    background-color: rgb(255, 255, 254);
+    margin-left: 200px;
+}
+.user
+{
+    margin-top: 23px;
+    /* background-color: blue; */
+}
+/* .pass
+{
+
+    /* background-color: red;
+}  */
+
+.co h1{
+    float: left;
+    width: 550px;
+    margin-top: 60px;
+}
+#wrapper{
+    background-color: rgba(246, 246, 246, 0.997);
+    width: 200px;
+    height: 927px;
+    float: left;
+}
+.sidebar{
+    background-color: red ;
+}
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Cairo', sans-serif;}
+body {
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden; */
+
+  background-image: url(assets/img/culture.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family:sans-serif;
+  margin:0;
+  line-height:1.5;
+  color: rgb(0, 0, 0);
+}
+ul {
+  position: relative;
+}
+ul li {
+  list-style: none;
+  text-align: center;
+}
+ul li a {
+  color: #333;
+  text-decoration: none;
+  /* font-size: 3em; */
+  padding: 5px 20px;
+  display: inline-flex;
+  font-weight: 700;
+  transition: 0.5s;
+}
+ul:hover li a {
+  color: #0002;
+}
+ul li:hover a {
+  color: #000;
+  background: transparent;
+}
+ul li a:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-37%, -38%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
+  color: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 500px;
+  transition: letter-spacing 0.5s, left 0.5s;
+}
+ul li a:hover:before {
+  content: attr(data-text);
+  opacity: 1;
+  left: 50%;
+  letter-spacing: 10px;
+  width: 1800px;
+  height: 1800px;
+}
+/* ul li:nth-child(6n + 1) a:before {
+    background: #ffffff;
+}
+ul li:nth-child(6n + 2) a:before {
+  background: #ffffff;
+}
+ul li:nth-child(6n + 3) a:before {
+  background: #ffffff;
+} */
+/* ul li:nth-child(6n + 4) a:before {
+  background: #a29bfe;
+}
+ul li:nth-child(6n + 5) a:before {
+  background: #fd79a8;
+}
+ul li:nth-child(6n + 6) a:before {
+  background: #ffeaa7;
+} */
+thead th{
+    color: rgb(0, 0, 0);
+}
+
+tbody td {
+    /* 1. Animate the background-color
+       from transparent to white on hover */
+    background-color: rgba(255,255,255,0);
+    transition: all 0.2s linear; 
+    transition-delay: 0.3s, 0s;
+    /* 2. Animate the opacity on hover */
+    opacity: 0.6;
+  }
+  tbody tr:hover td {
+    background-color: rgb(0, 0, 0);
+    color: rgb(16, 153, 43);
+    transition-delay: 0s, 0s;
+    opacity: 1;
+    font-size: 1em;
+  }
+  
+  td {
+    /* 3. Scale the text using transform on hover */
+    transform-origin: center left;
+    transition-property: transform;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+  }
+  tr:hover td {
+    transform: scale(1.1);
+  }
+  
+  
+  /* Codepen styling */
+  * { box-sizing: border-box }
+  
+  table {
+    width: 90%;
+    margin: 0 5%;
+    text-align: left;
+  }
+  th, td {
+    padding: 0.5em;
+  }
+  
+  /* body {
+    display: flex;
+    height: 100vh;
+    background: hsl(232, 22%, 90%);
+    color: rgba(95, 17, 232, 1);
+  } */
+  
+  body > *  {
+    margin: auto;
+  }
+  
