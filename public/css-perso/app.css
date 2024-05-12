@@ -1,0 +1,48 @@
+.align-right {
+    text-align: right;
+}
+.download {
+    float: right;
+}
+td{
+  color: black;
+}
+.fw-bold{
+  color: black;
+}
+th{
+  color: Black;
+}
+.content {
+    max-width: 400px; /* Ajustez selon vos besoins */
+  }
+  
+  .page {
+    display: none; /* Cacher toutes les pages par défaut */
+  }
+  
+  .pagination {
+    margin-top: 20px;
+  }
+  
+  .pagination a {
+    padding: 8px 16px;
+    background-color: #f1f1f1;
+    color: #333;
+    text-decoration: none;
+    margin-right: 5px;
+    border-radius: 4px;
+  }
+  
+  .pagination a:hover {
+    background-color: #ddd;
+  }
+  
+  .pagination .prev {
+    float: left;
+  }
+  
+  .pagination .next {
+    float: right;
+  }
+  
